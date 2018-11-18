@@ -1,0 +1,12 @@
+.wrapper {
+  background-color: var(--background-color-default);
+  padding: 20px;
+}
+
+.wrapper:hover {
+  background-color: var(--background-color-default-hover);
+}
+
+.wrapper.alt {
+  padding: 10px;
+}

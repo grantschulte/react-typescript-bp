@@ -1,0 +1,64 @@
+{
+  "name": "react-typescript-bp",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./build",
+    "client:build": "NODE_ENV=production webpack --config webpack.prod.js",
+    "client:watch": "NODE_ENV=development webpack --watch  --config webpack.dev.js",
+    "lint:js": "standard --fix",
+    "server:dev": "nodemon server.js",
+    "server:prod": "node server.js",
+    "type-check": "tsc",
+    "type-check:watch": "tsc --watch"
+  },
+  "author": "Grant J. Schulte <schulte.grant@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grantschulte/react-typescript-bp.git"
+  },
+  "dependencies": {
+    "@babel/core": "7.1.6",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0",
+    "@babel/preset-env": "7.1.6",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.1.0",
+    "@types/react": "16.7.6",
+    "@types/react-dom": "16.0.9",
+    "babel-loader": "8.0.4",
+    "clean-webpack-plugin": "1.0.0",
+    "css-loader": "1.0.1",
+    "dotenv": "6.1.0",
+    "express": "4.16.4",
+    "extract-text-webpack-plugin": "4.0.0-beta.0",
+    "html-webpack-plugin": "3.2.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "source-map-loader": "0.2.4",
+    "style-loader": "0.23.1",
+    "typescript": "3.1.6",
+    "webpack": "4.25.1",
+    "webpack-merge": "4.1.4"
+  },
+  "devDependencies": {
+    "morgan": "1.9.1",
+    "nodemon": "1.18.6",
+    "standard": "12.0.1",
+    "typings-for-css-modules-loader": "1.7.0",
+    "webpack-cli": "3.1.2",
+    "webpack-hot-middleware": "2.24.3"
+  },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
+  "standard": {
+    "ignore": [
+      "/build",
+      "/node_modules"
+    ]
+  }
+}
