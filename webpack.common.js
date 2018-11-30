@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const { DIRS } = require('./appconfig')
@@ -9,9 +10,6 @@ module.exports = {
   entry: {
     app: [
       `${DIRS.src}/client/Index.tsx`
-    ],
-    components: [
-      `${DIRS.src}/client/Components/Component.tsx`
     ]
   },
 
@@ -40,7 +38,15 @@ module.exports = {
 
     new webpack.DefinePlugin({
       'ENV': JSON.stringify(process.env.NODE_ENV)
-    })
+    }),
+
+    new CopyWebpackPlugin([
+      {
+        from: `${DIRS.src}/client/vendor/jwplayer`,
+        to: `${DIRS.build}/jwplayer`,
+        flatten: true
+      },
+    ])
   ],
 
   optimization: {

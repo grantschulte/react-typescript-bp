@@ -1,6 +1,5 @@
 :root {
-  --background-color-default: #222222;
-  --background-color-default-hover: #333333;
+  --background-color-default: #FFFFFF;
   --font-default: Helvetica, Arial, sans-serif;
-  --text-color: #FFFFFF;
+  --text-color: #222222;
 }

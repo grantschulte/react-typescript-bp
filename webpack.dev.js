@@ -20,6 +20,7 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(s*)css$/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: {
@@ -32,6 +33,12 @@ module.exports = merge(common, {
             }
           }
         })
+      },
+
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: ['style-loader', 'css-loader']
       }
     ]
   },

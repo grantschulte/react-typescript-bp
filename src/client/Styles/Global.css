@@ -5,6 +5,7 @@ body {
   font-size: 16px;
   font-family: var(--font-default);
   color: var(--text-color);
+  background-color: var(--background-color-default);
 }
 
 .cursor-pointer {

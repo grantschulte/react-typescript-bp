@@ -1,2 +1,2 @@
 export const wrapper: string;
-export const alt: string;
+export const loaderWrapper: string;
