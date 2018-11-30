@@ -38,15 +38,7 @@ module.exports = {
 
     new webpack.DefinePlugin({
       'ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-
-    new CopyWebpackPlugin([
-      {
-        from: `${DIRS.src}/client/vendor/jwplayer`,
-        to: `${DIRS.build}/jwplayer`,
-        flatten: true
-      },
-    ])
+    })
   ],
 
   optimization: {
